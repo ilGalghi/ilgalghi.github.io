@@ -1,2 +1,2 @@
-# ilgalghi.github.io
+# Leonardo Galgano
 Portfolio
