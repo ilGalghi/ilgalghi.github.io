@@ -141,6 +141,7 @@
     <footer class="text-center">
         <p>&copy; 2024 Portfolio by / created by Leonardo Galgano</p>
         <p>Profile views: <span id="counter">0</span> volte.</p>
+        
     </footer>
 
 
@@ -160,9 +161,35 @@
     // Esegui la funzione all'avvio della pagina
     setDarkModeFromPreference();
   </script>
+  <script>
+    // Funzione per aumentare il contatore e visualizzarlo
+    function incrementCounter() {
+      // Recupera il valore corrente del contatore dalla memoria locale (localStorage)
+      let count = localStorage.getItem('pageViews');
+
+      // Se il valore non esiste, inizializzalo a 0
+      if (!count) {
+        count = 0;
+      } else {
+        count = parseInt(count); // Converti il valore da stringa a numero intero
+      }
+
+      // Incrementa il contatore di 1
+      count++;
+
+      // Aggiorna il valore del contatore nella memoria locale
+      localStorage.setItem('pageViews', count);
+
+      // Visualizza il valore del contatore nella pagina HTML
+      document.getElementById('counter').innerText = count;
+    }
+
+    // Chiamata alla funzione per incrementare il contatore ogni volta che la pagina viene caricata
+    incrementCounter();
+    </script>
   
 
-  <script src="contatore.js"></script>
+  <!-- <script src="contatore.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
