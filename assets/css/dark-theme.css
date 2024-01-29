@@ -13,7 +13,7 @@ h6 {
 }
 
 a {
-  color: #1e1e1e;
+  color: #e4e4e4;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -627,6 +627,7 @@ a:hover {
   .navbar ul {
     display: none;
   }
+    
 }
 
 .navbar-mobile {
@@ -655,7 +656,7 @@ a:hover {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: #252525;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -670,11 +671,12 @@ a:hover {
   visibility: hidden;
 }
 
+/*Testo navbar*/
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #4e4e4e;
+  color: #ffffff;
 }
 
 .navbar-mobile a:hover,
