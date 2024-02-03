@@ -3,6 +3,19 @@ body {
   color: #4e4e4e;
 }
 
+/* Animazione fade-in*/
+.fade-in {
+    opacity: 0.1;
+    transform: translateY(10vh);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+    }
+
+/* Animazione fade-in (sfrutta in-page in main.js)*/
+.fade-in.in-page {
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
 h1,
 h2,
 h3,
@@ -193,6 +206,7 @@ a:hover {
   margin-bottom: 3rem;
   z-index: 2;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {

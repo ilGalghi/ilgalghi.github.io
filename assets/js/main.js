@@ -1,6 +1,37 @@
 (function() {
   "use strict";
 
+   
+   
+    //Script animazione in-page________________________________________________________________________________________________________________
+    
+    //elements
+    var elements_to_watch = document.querySelectorAll('.watch'); // Aggiungi il punto per indicare una classe CSS
+    //callback
+    var callback = function (items) {
+
+        items.forEach((item) => {
+            if (item.isIntersecting) {
+                item.target.classList.add("in-page");
+            } else {
+                item.target.classList.remove("in-page");
+            }
+        });
+    }
+
+    //observer
+    var observer = new IntersectionObserver(callback, { threshold: 0.4 }); //threshold ci dice animazione a quanta percentuale dello schermo
+    //apply
+    elements_to_watch.forEach((element) => {
+        observer.observe(element);
+
+    });
+
+    //__________________________________________________________________________________________________________________________________________
+
+
+
+
   /**
    * Easy selector helper function
    */

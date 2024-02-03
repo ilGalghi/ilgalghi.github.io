@@ -3,6 +3,20 @@ body {
   color: #ffffff;
 }
 
+/* Animazione fade-in*/
+.fade-in {
+    opacity: 0.1;
+    transform: translateY(10vh);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+    }
+
+/* Animazione fade-in (sfrutta in-page in main.js)*/
+.fade-in.in-page {
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
+
 h1,
 h2,
 h3,
@@ -10,7 +24,11 @@ h4,
 h5,
 h6 {
   color: #ffffff;
+  /*font-family: 'Inter', sans-serif;*/
 }
+
+
+
 
 a {
   color: #e4e4e4;
@@ -60,6 +78,8 @@ a:hover {
   font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.1;
+  
+  
 }
 
 .display-6 {
@@ -141,6 +161,7 @@ a:hover {
 /*--/ Title A /--*/
 .title-box {
   margin-bottom: 4rem;
+  
 }
 
 .title-a {
@@ -153,6 +174,8 @@ a:hover {
 .subtitle-a {
   text-decoration: none;
   color: #4e4e4e;
+  
+  
 }
 
 .line-mf {
@@ -193,6 +216,7 @@ a:hover {
   margin-bottom: 3rem;
   z-index: 2;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {
@@ -450,6 +474,7 @@ a:hover {
   padding: 0;
   font-weight: 600;
   letter-spacing: 1px;
+  
 }
 
 #header .logo a {
