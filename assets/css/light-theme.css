@@ -22,7 +22,7 @@ body {
 /*Freccia da hero ______________________________________________________________________*/
 .arrow-container {
     position: absolute;
-    bottom: 50px; /* Regola la distanza dalla parte inferiore della schermata */
+    bottom: 70px; /* Regola la distanza dalla parte inferiore della schermata */
     left: 50%;
     transform: translateX(-50%);
   }
