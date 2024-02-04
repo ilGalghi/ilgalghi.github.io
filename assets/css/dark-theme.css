@@ -17,6 +17,59 @@ body {
 }
 
 
+/*Freccia da hero ______________________________________________________________________*/
+.arrow-container {
+    position: absolute;
+    bottom: 50px; /* Regola la distanza dalla parte inferiore della schermata */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .arrow,
+  .arrow:before {
+    position: absolute;
+    left: 0%;
+  }
+  
+  .arrow {
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+  }
+  
+  .arrow:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 5px 0 0 5px;  /*Posizione freccia piccola*/
+    border-left: none;
+    border-top: none;
+    border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+  }
+  
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+}
+/*______________________________________________________________________________________*/
+
+
+
+
 h1,
 h2,
 h3,
