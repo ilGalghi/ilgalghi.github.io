@@ -20,7 +20,7 @@ body {
 /*Freccia da hero ______________________________________________________________________*/
 .arrow-container {
     position: absolute;
-    bottom: 75px; /* Regola la distanza dalla parte inferiore della schermata */
+    bottom: 78px; /* Regola la distanza dalla parte inferiore della schermata */
     left: 50%;
     transform: translateX(-50%);
   }
@@ -213,8 +213,7 @@ a:hover {
 
 /*--/ Title A /--*/
 .title-box {
-  margin-bottom: 4rem;
-  
+  margin-bottom: 2rem;
 }
 
 .title-a {
@@ -894,8 +893,8 @@ a:hover {
 # About
 --------------------------------------------------------------*/
 .about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .about-mf .about-img {
