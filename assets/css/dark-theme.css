@@ -3,7 +3,7 @@ body {
   color: #ffffff;
 }
 
-/* Animazione fade-in*/
+/* Animazione fade-in ______________________________________________________________________*/
 .fade-in {
     opacity: 0.1;
     transform: translateY(10vh);
@@ -15,9 +15,10 @@ body {
     opacity: 1;
     transform: translateY(0vh);
 }
+/*__________________________________________________________________________________________*/
 
 
-/*Freccia da hero ______________________________________________________________________*/
+/*Freccia da hero __________________________________________________________________________*/
 .arrow-container {
     position: absolute;
     bottom: 78px; /* Regola la distanza dalla parte inferiore della schermata */
@@ -65,9 +66,19 @@ body {
       transform: translate(-10px, -10px);
     }
 }
-/*______________________________________________________________________________________*/
+/*__________________________________________________________________________________________*/
 
 
+/* Bottone cambio tema - sfondo_____________________________________________________________*/
+#theme-toggle {
+    background: white;
+    border: transparent;    /* Remove default button border */
+    padding: 0;             /* Remove default button padding */
+    border-radius: 50%;
+    width: 32px;            /* Larghezza e altezza devono essere uguali */
+    height: 32px;
+}  
+/*__________________________________________________________________________________________*/
 
 
 h1,
@@ -84,16 +95,25 @@ h6 {
 
 
 a {
-  color: #e4e4e4;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
+    color: #ffffff;
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+    text-decoration-color: rgba(255, 255, 255, 0.25);
+    text-underline-offset: 0.25rem;
 }
 
+  
 a:hover {
-  color: #0078ff;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    font-weight: inherit;
+    line-height: inherit;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: 0.25rem;
 }
+  
 
 .p-r {
   position: relative;
@@ -524,13 +544,30 @@ a:hover {
   font-size: 28px;
   margin: 0;
   padding: 0;
-  font-weight: 600;
   letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
   
 }
 
-#header .logo a {
-  color: #fff;
+#header .logo a {                   /*Come link*/
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+#header .logo a:hover {                   /*Come link*/
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 #header .logo img {
@@ -583,6 +620,7 @@ a:hover {
   letter-spacing: 0.4px;
   position: relative;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .navbar a i,

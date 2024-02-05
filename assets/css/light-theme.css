@@ -3,7 +3,7 @@ body {
   color: #4e4e4e;
 }
 
-/* Animazione fade-in*/
+/* Animazione fade-in ______________________________________________________________________*/
 .fade-in {
     opacity: 0.1;
     transform: translateY(10vh);
@@ -15,10 +15,11 @@ body {
     opacity: 1;
     transform: translateY(0vh);
 }
+/*__________________________________________________________________________________________*/
 
 
 
-/*Freccia da hero ______________________________________________________________________*/
+/*Freccia da hero __________________________________________________________________________*/
 .arrow-container {
     position: absolute;
     bottom: 78px; /* Regola la distanza dalla parte inferiore della schermata */
@@ -66,12 +67,20 @@ body {
       transform: translate(-10px, -10px);
     }
 }
-/*______________________________________________________________________________________*/
+/*__________________________________________________________________________________________*/
 
 
 
-
-
+/* Bottone cambio tema - sfondo_____________________________________________________________*/
+#theme-toggle {
+    background: white;
+    border: transparent;    /* Remove default button border */
+    padding: 0;             /* Remove default button padding */
+    border-radius: 50%;
+    width: 32px;            /* Larghezza e altezza devono essere uguali */
+    height: 32px;
+}  
+/*__________________________________________________________________________________________*/
 
 
 
@@ -88,16 +97,19 @@ h6 {
 }
 
 a {
-  color: #1e1e1e;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
+    color: #0077ff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+a:hover {
+    color: #0077ff;
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
 }
 
-a:hover {
-  color: #0078ff;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-}
+
+
 
 .p-r {
   position: relative;
@@ -514,23 +526,35 @@ a:hover {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
-  transition: all 0.5s;
-  z-index: 997;
-  padding: 20px 0;
-}
-
 #header .logo {
   font-size: 28px;
   margin: 0;
   padding: 0;
-  font-weight: 600;
   letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+  
+#header .logo a {                   /*Come link*/
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 600;
 }
 
-#header .logo a {
-  color: #fff;
+#header .logo a:hover {                   /*Come link*/
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
 }
+  
 
 #header .logo img {
   max-height: 40px;
@@ -582,6 +606,7 @@ a:hover {
   letter-spacing: 0.4px;
   position: relative;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .navbar a i,
