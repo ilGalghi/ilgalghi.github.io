@@ -2,8 +2,7 @@ export const content = {
   EN: {
     hero: {
       title: "Leonardo Galgano",
-      subtitle: ["MSc Student in AI & Robotics", "Computer Vision Engineer", "Flutter Developer"],
-      cta: "Download CV",
+      subtitle: ["MSc Student in AI & Robotics @ Sapienza University", "Fast Charge for Formula SAE Driverless", "Flutter Developer"],
       socials: "Connect with me"
     },
     about: {
@@ -82,8 +81,7 @@ export const content = {
   IT: {
     hero: {
       title: "Leonardo Galgano",
-      subtitle: ["Studente Magistrale in AI & Robotica", "Computer Vision Engineer", "Sviluppatore Flutter"],
-      cta: "Scarica CV",
+      subtitle: ["Studente Magistrale in AI & Robotica @ Sapienza", "Fast Charge per Formula SAE Driverless", "Sviluppatore Flutter"],
       socials: "Connettiti con me"
     },
     about: {

@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, FileText, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
 import { content } from '../data/content';
 
@@ -29,7 +29,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="flex flex-col gap-2 mb-8"
+          className="flex flex-col gap-1 mb-8"
         >
           {t.subtitle.map((line, index) => (
             <p key={index} className="text-lg md:text-xl text-text-secondary font-light">
@@ -42,26 +42,14 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-col md:flex-row items-center justify-center gap-4"
+          className="flex items-center justify-center gap-6"
         >
-          <a
-            href="/resume.pdf" // Placeholder path
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 rounded-full bg-accent hover:bg-accent-glow text-bg font-semibold transition-all hover:scale-105 flex items-center gap-2"
-          >
-            <FileText className="w-4 h-4" />
-            {t.cta}
+          <a href="https://github.com/ilGalghi" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-white/5 hover:bg-white/10 text-white transition-all hover:scale-110">
+            <Github className="w-7 h-7" />
           </a>
-          
-          <div className="flex items-center gap-4">
-            <a href="https://github.com/ilGalghi" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors">
-              <Github className="w-5 h-5" />
-            </a>
-            <a href="https://linkedin.com/in/leonardogalgano" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-          </div>
+          <a href="https://linkedin.com/in/leonardogalgano" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-accent hover:bg-accent-glow text-bg transition-all hover:scale-110">
+            <Linkedin className="w-7 h-7" />
+          </a>
         </motion.div>
       </div>
 
