@@ -4,6 +4,12 @@ import './index.css'
 import App from './App.tsx'
 import { LanguageProvider } from './hooks/useLanguage'
 
+// Easter egg
+console.log(
+  "che fai tu qua! 🥸"
+);
+
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <LanguageProvider>

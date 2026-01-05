@@ -84,7 +84,8 @@ export const content = {
       categories: [
         { name: "Languages", items: ["Python", "C", "C++", "Java", "Dart", "TypeScript"] },
         { name: "AI/Robotics", items: ["Computer Vision (OpenCV, YOLO)", "TensorFlow", "SLAM", "ROS", "Sensor Fusion"] },
-        { name: "Dev", items: ["Flutter", "React", "Docker", "Git", "Cloud Infrastructure"] }
+        { name: "Dev", items: ["Flutter", "React", "Docker", "Git", "Cloud Infrastructure"] },
+        { name: "Soft Skills", items: ["Leadership", "Teamwork", "Problem Solving", "Public Speaking", "Project Management"] }
       ]
     },
     contact: {
@@ -184,7 +185,8 @@ export const content = {
       categories: [
         { name: "Linguaggi", items: ["Python", "C", "C++", "Java", "Dart", "TypeScript"] },
         { name: "AI/Robotica", items: ["Computer Vision (OpenCV, YOLO)", "TensorFlow", "SLAM", "ROS", "Sensor Fusion"] },
-        { name: "Sviluppo", items: ["Flutter", "React", "Docker", "Git", "Cloud Infrastructure"] }
+        { name: "Sviluppo", items: ["Flutter", "React", "Docker", "Git", "Cloud Infrastructure"] },
+        { name: "Soft Skills", items: ["Leadership", "Teamwork", "Problem Solving", "Public Speaking", "Project Management"] }
       ]
     },
     contact: {
