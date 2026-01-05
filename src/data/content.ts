@@ -19,7 +19,8 @@ export const content = {
           company: "Telcedo",
           period: "May 2025 - Present",
           description: "Developing AI-powered Digital Twin solutions for industrial plants. Built the cloud infrastructure and full-stack platform from scratch.",
-          tags: ["Full Stack", "Cloud", "AI", "Startup"]
+          tags: ["Full Stack", "Cloud", "AI", "Startup"],
+          link: "https://telcedo.com"
         },
         {
           id: 2,
@@ -27,7 +28,8 @@ export const content = {
           company: "Sapienza Fast Charge - Formula Student",
           period: "Sep 2024 - Present",
           description: "Developing YOLO-based pipelines for autonomous cone detection (97.2% mAP). Managing a dataset of 30k+ real/synthetic images.",
-          tags: ["YOLO", "Computer Vision", "Python", "Robotics"]
+          tags: ["YOLO", "Computer Vision", "Python", "Robotics"],
+          link: "https://sapienzafastcharge.it/"
         },
         {
           id: 3,
@@ -35,7 +37,8 @@ export const content = {
           company: "Sapienza Fast Charge",
           period: "Nov 2023 - Oct 2024",
           description: "Implemented C/C++ algorithms for localization and sensor fusion using Simulink and embedded hardware.",
-          tags: ["C++", "SLAM", "Sensor Fusion", "Simulink"]
+          tags: ["C++", "SLAM", "Sensor Fusion", "Simulink"],
+          link: "https://sapienzafastcharge.it/"
         },
         {
           id: 4,
@@ -51,7 +54,8 @@ export const content = {
           company: "Freelance",
           period: "Various",
           description: "Flutter/Dart mobile development focusing on UI/UX and cross-platform performance. Published apps on Play Store.",
-          tags: ["Flutter", "Dart", "Mobile", "UI/UX"]
+          tags: ["Flutter", "Dart", "Mobile", "UI/UX"],
+          link: "https://g.dev/ilgalghi"
         }
       ]
     },
@@ -95,7 +99,8 @@ export const content = {
           company: "Telcedo",
           period: "Mag 2025 - Presente",
           description: "Sviluppo di soluzioni Digital Twin basate su AI per impianti industriali. Creazione da zero dell'infrastruttura cloud e della piattaforma full-stack.",
-          tags: ["Full Stack", "Cloud", "AI", "Startup"]
+          tags: ["Full Stack", "Cloud", "AI", "Startup"],
+          link: "https://telcedo.com"
         },
         {
           id: 2,
@@ -103,7 +108,8 @@ export const content = {
           company: "Sapienza Fast Charge - Formula Student",
           period: "Set 2024 - Presente",
           description: "Sviluppo di pipeline YOLO per il riconoscimento coni (97.2% mAP) per la guida autonoma. Gestione dataset di 30k+ immagini reali/sintetiche.",
-          tags: ["YOLO", "Computer Vision", "Python", "Robotica"]
+          tags: ["YOLO", "Computer Vision", "Python", "Robotica"],
+          link: "https://sapienzafastcharge.it/"
         },
         {
           id: 3,
@@ -111,7 +117,8 @@ export const content = {
           company: "Sapienza Fast Charge",
           period: "Nov 2023 - Ott 2024",
           description: "Implementazione algoritmi C/C++ per localizzazione e sensor fusion usando Simulink e hardware embedded.",
-          tags: ["C++", "SLAM", "Sensor Fusion", "Simulink"]
+          tags: ["C++", "SLAM", "Sensor Fusion", "Simulink"],
+          link: "https://sapienzafastcharge.it/"
         },
         {
           id: 4,
@@ -127,7 +134,8 @@ export const content = {
           company: "Freelance",
           period: "Varie",
           description: "Sviluppo mobile Flutter/Dart con focus su UI/UX e performance cross-platform. App pubblicate sul Play Store.",
-          tags: ["Flutter", "Dart", "Mobile", "UI/UX"]
+          tags: ["Flutter", "Dart", "Mobile", "UI/UX"],
+          link: "https://g.dev/ilgalghi"
         }
       ]
     },
