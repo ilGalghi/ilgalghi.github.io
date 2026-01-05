@@ -58,6 +58,27 @@ export const content = {
         }
       ]
     },
+    education: {
+      title: "Education",
+      items: [
+        {
+          id: 1,
+          school: "Sapienza University of Rome",
+          degree: "Master degree, Artificial Intelligence and Robotics",
+          period: "Dec 2025 – Present",
+          description: "Specializing in the design of advanced robotic systems and intelligent information processing. The curriculum covers the intersection of Computer Science and Automation, with a focus on Machine Learning, Computer Vision, autonomous navigation in unstructured environments, and practical robot construction. Taught entirely in English.",
+          logo: "/sapienza-logo.png" 
+        },
+        {
+          id: 2,
+          school: "Sapienza University of Rome",
+          degree: "Bachelor's degree, Computer Engineering",
+          period: "Sep 2022 – Dec 2025",
+          description: "Completed a Bachelor's degree in Computer Engineering at Sapienza University of Rome, with a strong focus on software development, algorithms, and hardware systems. The curriculum included advanced coursework in Algorithms and Programming, providing solid theoretical foundations that I applied practically through hands-on projects and team activities.",
+          activities: "Member of the Sapienza Fast Charge Formula Team, contributing to the Driverless division. We design and develop a self-driving electric vehicle to compete in the Formula Student Germany (FSG) competition, applying theory to real-world autonomous systems."
+        }
+      ]
+    },
     skills: {
       title: "Skills",
       categories: [
@@ -74,6 +95,7 @@ export const content = {
     navbar: {
       about: "About",
       experience: "Experience",
+      education: "Education",
       skills: "Skills",
       contact: "Contact"
     }
@@ -137,6 +159,26 @@ export const content = {
         }
       ]
     },
+    education: {
+      title: "Formazione",
+      items: [
+        {
+          id: 1,
+          school: "Sapienza Università di Roma",
+          degree: "Laurea Magistrale, Artificial Intelligence and Robotics",
+          period: "Dic 2025 – Presente",
+          description: "Specializzazione nella progettazione di sistemi robotici avanzati e nell'elaborazione intelligente delle informazioni. Il curriculum copre l'intersezione tra Informatica e Automazione, con un focus su Machine Learning, Computer Vision, navigazione autonoma in ambienti non strutturati e costruzione pratica di robot. Insegnato interamente in Inglese."
+        },
+        {
+          id: 2,
+          school: "Sapienza Università di Roma",
+          degree: "Laurea Triennale, Ingegneria Informatica",
+          period: "Set 2022 – Dic 2025",
+          description: "Laurea Triennale in Ingegneria Informatica presso Sapienza Università di Roma, con un forte focus su sviluppo software, algoritmi e sistemi hardware. Il curriculum includeva corsi avanzati in Algoritmi e Programmazione, fornendo solide basi teoriche applicate praticamente attraverso progetti pratici e attività di team.",
+          activities: "Membro del Sapienza Fast Charge Formula Team, divisione Driverless. Progettiamo e sviluppiamo un veicolo elettrico a guida autonoma per competere nella Formula Student Germany (FSG), applicando la teoria a sistemi autonomi reali."
+        }
+      ]
+    },
     skills: {
       title: "Competenze",
       categories: [
@@ -153,6 +195,7 @@ export const content = {
     navbar: {
       about: "Chi Sono",
       experience: "Esperienza",
+      education: "Formazione",
       skills: "Competenze",
       contact: "Contattami"
     }
