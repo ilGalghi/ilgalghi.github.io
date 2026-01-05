@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg text-text-primary antialiased font-sans overflow-x-hidden;
+    /* Custom scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #334155 #0f172a; /* Slate 700 thumb, Slate 900 track */
+  }
+
+  /* Webkit Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-bg-secondary;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full hover:bg-gray-600 transition-colors;
+  }
+}
+
+/* Inter Font - we will use a Google Font link in index.html or import it here if we installed it. 
+   For now, we rely on the font stack falling back or adding the link in index.html */
