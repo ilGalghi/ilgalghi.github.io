@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../hooks/useLanguage';
 import { content } from '../data/content';
-import { Mail, Github, Linkedin, ArrowUp } from 'lucide-react';
+import { Mail, Github, Linkedin, ArrowUp, Smartphone, Globe } from 'lucide-react';
 
 export const Contact = () => {
   const { language } = useLanguage();
@@ -33,12 +33,22 @@ export const Contact = () => {
             {t.email}
           </a>
 
-          <div className="flex justify-center gap-6 mb-12">
-            <a href="https://github.com/ilGalghi" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-white transition-colors">
-              <Github className="w-6 h-6" />
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-12">
+            <a href="https://github.com/ilGalghi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-accent/40 text-text-secondary hover:text-white transition-colors">
+              <Github className="w-5 h-5" />
+              <span className="text-sm font-medium">GitHub</span>
             </a>
-            <a href="https://linkedin.com/in/leonardogalgano" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-white transition-colors">
-              <Linkedin className="w-6 h-6" />
+            <a href="https://linkedin.com/in/leonardogalgano/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-accent/40 text-text-secondary hover:text-white transition-colors">
+              <Linkedin className="w-5 h-5" />
+              <span className="text-sm font-medium">LinkedIn</span>
+            </a>
+            <a href="https://telcedo.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-accent/40 text-text-secondary hover:text-white transition-colors">
+              <Globe className="w-5 h-5" />
+              <span className="text-sm font-medium">Telcedo</span>
+            </a>
+            <a href="https://play.google.com/store/apps/dev?id=4935235036652631052" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-accent/40 text-text-secondary hover:text-white transition-colors">
+              <Smartphone className="w-5 h-5" />
+              <span className="text-sm font-medium">Play Store</span>
             </a>
           </div>
 

@@ -7,54 +7,68 @@ export const content = {
     },
     about: {
       title: "About Me",
-      description: "I bridge the gap between scalable software and intelligent autonomous systems. Currently focusing on Computer Vision for autonomous racing and Agentic AI architectures. Co-Founder of Telcedo and back-to-back winner of the Reply Student Tech Clash."
+      description: "I bridge the gap between scalable software and intelligent autonomous systems. Currently pursuing my MSc in AI & Robotics at Sapienza University, focusing on Computer Vision and Agentic Architectures. As Co-Founder & CTO at Telcedo, I lead the development of cloud-based Digital Twin platforms. With a background as a competitive tennis player, I bring discipline, resilience, and a problem-solving mindset to every engineering challenge I tackle. Back-to-back winner of the Reply Student Tech Clash (2024 & 2025)."
     },
     experience: {
-      title: "Experience & Projects",
+      title: "Experience",
       items: [
         {
           id: 1,
           title: "Co-Founder & CTO",
           company: "Telcedo",
           period: "May 2025 - Present",
-          description: "Developing AI-powered Digital Twin solutions for industrial plants. Built the cloud infrastructure and full-stack platform from scratch.",
-          tags: ["Full Stack", "Cloud", "AI", "Startup"],
+          description: "Leading the technical vision and cloud infrastructure for AI-powered Industrial Digital Twin solutions. Designed and developed the platform natively utilizing Vue.js, Node.js, and a scalable architecture.",
+          tags: ["Node.js", "Vue.js", "Cloud", "Architecture"],
           link: "https://telcedo.com"
         },
         {
           id: 2,
+          title: "Freelance App Developer",
+          company: "Freelance",
+          period: "Feb 2024 - Present",
+          description: "Designing and publishing cross-platform Flutter apps with a focus on UI/UX and performance. Published a fully functional app managing releases via Google Play Console with source code available on GitHub.",
+          tags: ["Flutter", "Dart", "Mobile", "UI/UX"],
+          link: "https://play.google.com/store/apps/dev?id=4935235036652631052"
+        }
+      ]
+    },
+    projects: {
+      title: "Projects & Competitions",
+      items: [
+        {
+          id: 1,
           title: "Computer Vision Member",
-          company: "Sapienza Fast Charge - Formula Student",
+          company: "Sapienza Fast Charge",
           period: "Sep 2024 - Present",
-          description: "Developing YOLO-based pipelines for autonomous cone detection (97.2% mAP). Managing a dataset of 30k+ real/synthetic images.",
-          tags: ["YOLO", "Computer Vision", "Python", "Robotics"],
+          description: "Developing image processing pipelines in ROS2 to detect and classify cones for autonomous vehicles. Fine-tuned YOLO-based models achieving 97.2% mAP@50 and curated a custom 30K+ image dataset.",
+          tags: ["ROS2", "YOLO", "Computer Vision", "Python"],
+          link: "https://sapienzafastcharge.it/"
+        },
+        {
+          id: 2,
+          title: "SLAM/Sensor Fusion Member",
+          company: "Sapienza Fast Charge",
+          period: "Nov 2023 - Oct 2024",
+          description: "Implemented C/C++ algorithms for localization and sensor fusion. Tested and validated code with Arduino and embedded components for robust performance on track.",
+          tags: ["C++", "Embedded", "Sensor Fusion", "Simulink"],
           link: "https://sapienzafastcharge.it/"
         },
         {
           id: 3,
-          title: "SLAM/Sensor Fusion Member",
-          company: "Sapienza Fast Charge",
-          period: "Nov 2023 - Oct 2024",
-          description: "Implemented C/C++ algorithms for localization and sensor fusion using Simulink and embedded hardware.",
-          tags: ["C++", "SLAM", "Sensor Fusion", "Simulink"],
-          link: "https://sapienzafastcharge.it/"
-        },
-        {
-          id: 4,
           title: "Reply Student Tech Clash Winner",
           company: "Reply",
           period: "2024 & 2025",
-          description: "Back-to-back hackathon winner. 2025: Built \"Gregorit\", an Agentic AI system for medical workflows using Multi-Agent architectures.",
+          description: "1st place out of 33 teams! Built \"Gregorit\", an agentic platform that transforms medical consultations into structured care plans through coordinated agents, automated reasoning, and end-to-end workflows.",
           tags: ["Hackathon", "Agentic AI", "Multi-Agent"]
         },
         {
-          id: 5,
-          title: "Freelance App Developer",
-          company: "Freelance",
-          period: "Various",
-          description: "Flutter/Dart mobile development focusing on UI/UX and cross-platform performance. Published apps on Play Store.",
-          tags: ["Flutter", "Dart", "Mobile", "UI/UX"],
-          link: "https://g.dev/ilgalghi"
+          id: 4,
+          title: "Open Source Flutter App",
+          company: "LapisCalc",
+          period: "2024",
+          description: "Open source repository for my published Flutter application, featuring clean state management, cross-platform responsiveness, and robust CI/CD practices.",
+          tags: ["Flutter", "Open Source", "Dart"],
+          link: "https://github.com/ilGalghi/LapisCalc"
         }
       ]
     },
@@ -83,9 +97,9 @@ export const content = {
       title: "Skills",
       categories: [
         { name: "Languages", items: ["Python", "C", "C++", "Java", "Dart", "TypeScript"] },
-        { name: "AI/Robotics", items: ["Computer Vision (OpenCV, YOLO)", "TensorFlow", "SLAM", "ROS", "Sensor Fusion"] },
-        { name: "Dev", items: ["Flutter", "React", "Docker", "Git", "Cloud Infrastructure"] },
-        { name: "Soft Skills", items: ["Leadership", "Teamwork", "Problem Solving", "Public Speaking", "Project Management"] }
+        { name: "AI/Robotics", items: ["Computer Vision (OpenCV, YOLO)", "ROS2", "TensorFlow", "SLAM", "Embedded"] },
+        { name: "Dev", items: ["Node.js", "React", "Vue.js", "Flutter", "TailwindCSS", "Docker", "Cloud"] },
+        { name: "Soft Skills", items: ["Leadership", "Discipline", "Problem Solving", "Teamwork", "Public Speaking"] }
       ]
     },
     contact: {
@@ -96,6 +110,7 @@ export const content = {
     navbar: {
       about: "About",
       experience: "Experience",
+      projects: "Projects",
       education: "Education",
       skills: "Skills",
       contact: "Contact"
@@ -109,54 +124,68 @@ export const content = {
     },
     about: {
       title: "Chi Sono",
-      description: "Collego il mondo del software scalabile con i sistemi autonomi intelligenti. Attualmente focalizzato sulla Computer Vision per la guida autonoma e architetture di Agentic AI. Co-Founder di Telcedo e vincitore per due anni consecutivi del Reply Student Tech Clash."
+      description: "Collego il mondo del software scalabile con i sistemi autonomi intelligenti. Attualmente studente Magistrale in AI & Robotica alla Sapienza, focalizzato su Computer Vision e Architetture Agentic. Come Co-Founder & CTO in Telcedo, guido lo sviluppo di piattaforme cloud per Digital Twin. Con un passato agonistico nel tennis, porto disciplina, resilienza e una mentalità orientata al problem-solving in ogni sfida ingegneristica. Vincitore per due anni consecutivi del Reply Student Tech Clash (2024 e 2025)."
     },
     experience: {
-      title: "Esperienza & Progetti",
+      title: "Esperienza Professionale",
       items: [
         {
           id: 1,
           title: "Co-Founder & CTO",
           company: "Telcedo",
           period: "Mag 2025 - Presente",
-          description: "Sviluppo di soluzioni Digital Twin basate su AI per impianti industriali. Creazione da zero dell'infrastruttura cloud e della piattaforma full-stack.",
-          tags: ["Full Stack", "Cloud", "AI", "Startup"],
+          description: "Guido la visione tecnica e l'infrastruttura cloud per soluzioni di Digital Twin industriali basate su AI. Ho progettato e sviluppato la piattaforma utilizzando Vue.js, Node.js e un'architettura scalabile.",
+          tags: ["Node.js", "Vue.js", "Cloud", "Architettura"],
           link: "https://telcedo.com"
         },
         {
           id: 2,
+          title: "Sviluppatore App Freelance",
+          company: "Freelance",
+          period: "Feb 2024 - Presente",
+          description: "Sviluppo mobile Flutter/Dart cross-platform con focus su UI/UX e performance. Ho pubblicato un'app completa sul Play Store, gestendo le release tramite Google Play Console e pubblicando il codice su GitHub.",
+          tags: ["Flutter", "Dart", "Mobile", "UI/UX"],
+          link: "https://play.google.com/store/apps/dev?id=4935235036652631052"
+        }
+      ]
+    },
+    projects: {
+      title: "Progetti & Competizioni",
+      items: [
+        {
+          id: 1,
           title: "Membro Computer Vision",
-          company: "Sapienza Fast Charge - Formula Student",
+          company: "Sapienza Fast Charge",
           period: "Set 2024 - Presente",
-          description: "Sviluppo di pipeline YOLO per il riconoscimento coni (97.2% mAP) per la guida autonoma. Gestione dataset di 30k+ immagini reali/sintetiche.",
-          tags: ["YOLO", "Computer Vision", "Python", "Robotica"],
+          description: "Sviluppo di pipeline in ROS2 per rilevare e classificare coni per veicoli autonomi. Modelli YOLO ottimizzati con 97.2% mAP@50 e gestione di un dataset personalizzato di oltre 30k immagini.",
+          tags: ["ROS2", "YOLO", "Computer Vision", "Python"],
+          link: "https://sapienzafastcharge.it/"
+        },
+        {
+          id: 2,
+          title: "Membro SLAM/Sensor Fusion",
+          company: "Sapienza Fast Charge",
+          period: "Nov 2023 - Ott 2024",
+          description: "Implementazione algoritmi C/C++ per localizzazione e sensor fusion. Codice testato e validato su Arduino e componenti embedded per performance robuste su pista.",
+          tags: ["C++", "Embedded", "Sensor Fusion", "Simulink"],
           link: "https://sapienzafastcharge.it/"
         },
         {
           id: 3,
-          title: "Membro SLAM/Sensor Fusion",
-          company: "Sapienza Fast Charge",
-          period: "Nov 2023 - Ott 2024",
-          description: "Implementazione algoritmi C/C++ per localizzazione e sensor fusion usando Simulink e hardware embedded.",
-          tags: ["C++", "SLAM", "Sensor Fusion", "Simulink"],
-          link: "https://sapienzafastcharge.it/"
-        },
-        {
-          id: 4,
           title: "Vincitore Reply Student Tech Clash",
           company: "Reply",
           period: "2024 & 2025",
-          description: "Vincitore consecutivo dell'hackathon. 2025: Creato \"Gregorit\", un sistema di Agentic AI per workflow medici usando architetture Multi-Agent.",
+          description: "1° posto su 33 team! Creazione di \"Gregorit\", una piattaforma agentic che trasforma consultazioni mediche in piani di cura strutturati tramite agenti coordinati, ragionamento automatizzato e workflow completi.",
           tags: ["Hackathon", "Agentic AI", "Multi-Agent"]
         },
         {
-          id: 5,
-          title: "Sviluppatore App Freelance",
-          company: "Freelance",
-          period: "Varie",
-          description: "Sviluppo mobile Flutter/Dart con focus su UI/UX e performance cross-platform. App pubblicate sul Play Store.",
-          tags: ["Flutter", "Dart", "Mobile", "UI/UX"],
-          link: "https://g.dev/ilgalghi"
+          id: 4,
+          title: "App Flutter Open Source",
+          company: "LapisCalc",
+          period: "2024",
+          description: "Codice open source per la mia app Flutter pubblicata, che evidenzia un robusto state management, reattività cross-platform e practice di sviluppo pulito.",
+          tags: ["Flutter", "Open Source", "Dart"],
+          link: "https://github.com/ilGalghi/LapisCalc"
         }
       ]
     },
@@ -184,9 +213,9 @@ export const content = {
       title: "Competenze",
       categories: [
         { name: "Linguaggi", items: ["Python", "C", "C++", "Java", "Dart", "TypeScript"] },
-        { name: "AI/Robotica", items: ["Computer Vision (OpenCV, YOLO)", "TensorFlow", "SLAM", "ROS", "Sensor Fusion"] },
-        { name: "Sviluppo", items: ["Flutter", "React", "Docker", "Git", "Cloud Infrastructure"] },
-        { name: "Soft Skills", items: ["Leadership", "Teamwork", "Problem Solving", "Public Speaking", "Project Management"] }
+        { name: "AI/Robotica", items: ["Computer Vision (OpenCV, YOLO)", "ROS2", "TensorFlow", "SLAM", "Embedded"] },
+        { name: "Sviluppo", items: ["Node.js", "React", "Vue.js", "Flutter", "TailwindCSS", "Docker", "Cloud"] },
+        { name: "Soft Skills", items: ["Leadership", "Disciplina", "Problem Solving", "Teamwork", "Public Speaking"] }
       ]
     },
     contact: {
@@ -197,6 +226,7 @@ export const content = {
     navbar: {
       about: "Chi Sono",
       experience: "Esperienza",
+      projects: "Progetti",
       education: "Formazione",
       skills: "Competenze",
       contact: "Contattami"
