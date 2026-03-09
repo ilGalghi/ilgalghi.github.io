@@ -25,13 +25,17 @@ export const Contact = () => {
             <span className="text-accent">.</span>
           </h2>
           
-          <a
-            href="mailto:contact@example.com" // Replace with actual if known, or generic
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent/10 text-accent font-medium hover:bg-accent hover:text-bg transition-all mb-12 border border-accent/20"
+          <button
+            onClick={() => {
+              const user = "leonardo.galgano.work";
+              const domain = "gmail.com";
+              window.location.href = `mai` + `lto:${user}@${domain}`;
+            }}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent/10 text-accent font-medium hover:bg-accent hover:text-bg transition-all mb-12 border border-accent/20 cursor-pointer"
           >
             <Mail className="w-5 h-5" />
             {t.email}
-          </a>
+          </button>
 
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-12">
             <a href="https://github.com/ilGalghi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-accent/40 text-text-secondary hover:text-white transition-colors">

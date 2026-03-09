@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, ChevronDown, FileText } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
 import { content } from '../data/content';
 
@@ -49,6 +49,10 @@ export const Hero = () => {
           </a>
           <a href="https://linkedin.com/in/leonardogalgano" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-accent hover:bg-accent-glow text-bg transition-all hover:scale-110">
             <Linkedin className="w-7 h-7" />
+          </a>
+          <a href="/CV_Leonardo_Galgano.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-accent text-accent hover:bg-accent hover:text-bg font-semibold transition-all hover:scale-105">
+            <FileText className="w-6 h-6" />
+            <span>CV</span>
           </a>
         </motion.div>
       </div>
