@@ -7,7 +7,7 @@ export const content = {
     },
     about: {
       title: "About Me",
-      description: "I bridge the gap between scalable software and intelligent autonomous systems. Currently pursuing my MSc in AI & Robotics at Sapienza University, focusing on Computer Vision and Agentic Architectures. As Co-Founder & CTO at Telcedo, I lead the development of cloud-based Digital Twin platforms. With a background as a competitive tennis player, I bring discipline, resilience, and a problem-solving mindset to every engineering challenge I tackle. Back-to-back winner of the Reply Student Tech Clash (2024 & 2025)."
+      description: "I write software for robots and autonomous systems — and I also build cloud platforms when needed. Currently pursuing my MSc in AI & Robotics at Sapienza University, focusing on Computer Vision and Agentic Architectures. As Co-Founder & CTO at Telcedo, I lead the development of cloud-based Digital Twin platforms. With a background as a competitive tennis player, Years of competitive tennis taught me how to grind through problems without shortcuts. Back-to-back winner of the Reply Student Tech Clash (2024 & 2025)."
     },
     experience: {
       title: "Experience",
@@ -17,7 +17,7 @@ export const content = {
           title: "Co-Founder & CTO",
           company: "Telcedo",
           period: "May 2025 - Present",
-          description: "Leading the technical vision and cloud infrastructure for AI-powered Industrial Digital Twin solutions. Designed and developed the platform natively utilizing Vue.js, Node.js, and a scalable architecture.",
+          description: "Leading the technical vision and cloud infrastructure for AI-powered Industrial Digital Twin solutions. Built the whole platform from scratch — Vue.js frontend, Node.js backend, cloud deployment.",
           tags: ["Node.js", "Vue.js", "Cloud", "Architecture"],
           link: "https://telcedo.com"
         },
