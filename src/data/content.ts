@@ -7,7 +7,7 @@ export const content = {
     },
     about: {
       title: "About Me",
-      description: "I write software for robots and autonomous systems — and I also build cloud platforms when needed. Currently pursuing my MSc in AI & Robotics at Sapienza University, focusing on Computer Vision and Agentic Architectures. As Co-Founder & CTO at Telcedo, I lead the development of cloud-based Digital Twin platforms. With a background as a competitive tennis player, Years of competitive tennis taught me how to grind through problems without shortcuts. Back-to-back winner of the Reply Student Tech Clash (2024 & 2025)."
+      description: "I write software for robots and autonomous systems — and I also build cloud platforms when needed. Currently pursuing my MSc in AI & Robotics at Sapienza University, focusing on Computer Vision and Agentic Architectures. As Co-Founder & CTO at Telcedo, I lead the development of cloud-based Digital Twin platforms. With a background as a competitive tennis player, years of competitive tennis taught me how to grind through problems without shortcuts. Back-to-back winner of the Reply Student Tech Clash (2024 & 2025)."
     },
     experience: {
       title: "Experience",
