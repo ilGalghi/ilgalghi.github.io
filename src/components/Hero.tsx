@@ -13,9 +13,9 @@ export const Hero = () => {
       {/* Background Gradient Blob */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[120px] -z-10 opacity-30 animate-pulse" />
 
-      {/* Main content — flex-1 so it fills all available space and stays centered */}
+      {/* Main content — flex-1 centers vertically; pb on mobile avoids overlap with the absolute strip */}
       <div className="flex-1 flex items-center justify-center z-10">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-6 text-center pb-[150px] md:pb-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -60,8 +60,8 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Infinite Logo Carousel — in normal flow, sits naturally below the centered content */}
-      <div className="w-full border-y border-white/5 bg-white/5 py-4 overflow-hidden backdrop-blur-md z-20">
+      {/* Infinite Logo Carousel — absolute so it doesn't affect flex-1 content centering */}
+      <div className="absolute bottom-28 md:bottom-[96px] lg:bottom-[108px] w-full border-y border-white/5 bg-white/5 py-4 overflow-hidden backdrop-blur-md z-20">
         <motion.div
           className="flex items-center justify-start gap-12 sm:gap-24 w-max pr-12 sm:pr-24"
           animate={{ x: ["0%", "-50%"] }}
