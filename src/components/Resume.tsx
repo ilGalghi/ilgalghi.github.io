@@ -11,9 +11,9 @@ const TimelineItem = ({
   type: 'education' | 'experience';
 }) => {
   return (
-    <div className="relative pl-6 md:pl-8 mb-8 last:mb-0">
-      {/* Timeline Dot */}
-      <div className="absolute left-[-2px] md:left-[-4px] top-[42px] w-2.5 h-2.5 outline outline-4 outline-bg rounded-full bg-accent z-10" />
+    <div className="relative pl-10 mb-8 last:mb-0">
+      {/* Timeline Dot — centered on the line at left-4 (16px): 16px - 5px (half of w-2.5) = 11px */}
+      <div className="absolute left-[11px] top-[42px] w-2.5 h-2.5 outline outline-4 outline-bg rounded-full bg-accent z-10" />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -83,15 +83,15 @@ export const Resume = () => {
               </h2>
             </motion.div>
 
-            <div className="relative pl-2 md:pl-0">
-               {/* Global line connecting all dots */}
-               <div className="absolute left-[2px] md:left-0 top-8 bottom-4 w-[1px] bg-gradient-to-b from-accent/50 to-transparent" />
+            <div className="relative">
+               {/* Global line — at left-4 (16px), matching dot center */}
+               <div className="absolute left-4 top-8 bottom-4 w-[1px] bg-gradient-to-b from-accent/50 to-transparent" />
                <div className="flex flex-col relative">
                 {eduData.items.map((item: any) => (
-                  <TimelineItem 
-                    key={item.id} 
-                    item={item} 
-                    type="education" 
+                  <TimelineItem
+                    key={item.id}
+                    item={item}
+                    type="education"
                   />
                 ))}
               </div>
@@ -112,9 +112,9 @@ export const Resume = () => {
               </h2>
             </motion.div>
 
-            <div className="relative pl-2 md:pl-0">
-               {/* Global line connecting all dots */}
-               <div className="absolute left-[2px] md:left-0 top-8 bottom-4 w-[1px] bg-gradient-to-b from-accent/50 to-transparent" />
+            <div className="relative">
+               {/* Global line — at left-4 (16px), matching dot center */}
+               <div className="absolute left-4 top-8 bottom-4 w-[1px] bg-gradient-to-b from-accent/50 to-transparent" />
                <div className="flex flex-col relative">
                 {expData.items.map((item: any) => (
                   <TimelineItem 
