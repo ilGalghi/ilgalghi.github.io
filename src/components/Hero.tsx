@@ -68,7 +68,7 @@ export const Hero = () => {
       </motion.div>
 
       {/* Infinite Logo Carousel */}
-      <div className="absolute bottom-40 w-full border-y border-white/5 bg-white/5 py-4 overflow-hidden backdrop-blur-md z-20">
+      <div className="absolute bottom-36 w-full border-y border-white/5 bg-white/5 py-4 overflow-hidden backdrop-blur-md z-20">
         <motion.div 
           className="flex items-center justify-start gap-12 sm:gap-24 w-max pr-12 sm:pr-24"
           animate={{ x: ["0%", "-50%"] }}
@@ -104,6 +104,11 @@ export const Hero = () => {
                     src="/logos/logo-eng.webp" 
                     alt="Engineering" 
                     className="h-8 sm:h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" 
+                  />
+                  <img 
+                    src="/logos/logo-telcedo.webp" 
+                    alt="Telcedo" 
+                    className="h-10 sm:h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" 
                   />
                 </div>
               ))}
