@@ -7,7 +7,7 @@ export const content = {
     },
     about: {
       title: "About Me",
-      description: "I write software for robots and autonomous systems — and I also build cloud platforms when needed. Currently pursuing my MSc in AI & Robotics at Sapienza University, focusing on Computer Vision and Agentic Architectures. As Co-Founder & CTO at Telcedo, I lead the development of cloud-based Digital Twin platforms. With a background as a competitive tennis player, years of competitive tennis taught me how to grind through problems without shortcuts. Back-to-back winner of the Reply Student Tech Clash (2024 & 2025)."
+      description: "I write software for robots and autonomous systems — and build cloud platforms when needed. Currently doing my MSc in AI & Robotics at Sapienza, focused on Computer Vision and Agentic Architectures. Co-Founder & CTO at Telcedo, where I handle the full tech side of our Digital Twin platform. Six years of competitive tennis at FIT level taught me to work under pressure and see things through. Back-to-back winner of the Reply Student Tech Clash (2024 & 2025)."
     },
     experience: {
       title: "Experience",
@@ -17,7 +17,7 @@ export const content = {
           title: "Co-Founder & CTO",
           company: "Telcedo",
           period: "May 2025 - Present",
-          description: "Leading the technical vision and cloud infrastructure for AI-powered Industrial Digital Twin solutions. Built the whole platform from scratch — Vue.js frontend, Node.js backend, cloud deployment.",
+          description: "I handle the full technical side — designed the architecture, built the platform from scratch (Vue.js + Node.js), and own the cloud deployment. Also built the company website.",
           tags: ["Node.js", "Vue.js", "Cloud", "Architecture"],
           link: "https://telcedo.com"
         },
@@ -26,7 +26,7 @@ export const content = {
           title: "Freelance App Developer",
           company: "Freelance",
           period: "Feb 2024 - Present",
-          description: "Designing and publishing cross-platform Flutter apps with a focus on UI/UX and performance. Published a fully functional app managing releases via Google Play Console with source code available on GitHub.",
+          description: "Building and shipping Flutter/Dart apps focused on performance and clean UX. One app live on the Play Store — releases managed via Google Play Console, source code on GitHub.",
           tags: ["Flutter", "Dart", "Mobile", "UI/UX"],
           link: "https://play.google.com/store/apps/dev?id=4935235036652631052"
         }
@@ -42,8 +42,8 @@ export const content = {
           title: "Reply Student Tech Clash",
           company: "Reply",
           period: "2024",
-          subtitle: "1st out of 33 teams",
-          description: "Built a multi-agent LLM system for workplace safety — automating risk assessment, compliance monitoring, and real-time hazard detection through coordinated AI agent pipelines.",
+          subtitle: "1st out of 38+ teams",
+          description: "Built a RAG-based platform for workplace safety — querying regulations and procedures to flag risks, guide compliance checks, and surface the right information at the right time.",
           tags: ["LLM", "Multi-Agent", "Safety AI", "Python"],
         },
         {
@@ -51,8 +51,8 @@ export const content = {
           title: "Reply Student Tech Clash",
           company: "Reply",
           period: "2025",
-          subtitle: "1st Place",
-          description: "Built \"Gregorit\", an agentic platform that transforms medical consultations into structured care plans through coordinated agents, automated reasoning, and end-to-end workflows.",
+          subtitle: "1st out of 33 teams",
+          description: "Built \"Gregorit\", an agentic platform that turns medical consultations into structured care plans — coordinated agents, automated reasoning, end-to-end workflows.",
           tags: ["Agentic AI", "Multi-Agent", "LLM"],
         },
         {
@@ -61,7 +61,7 @@ export const content = {
           company: "Codemotion",
           period: "2026",
           subtitle: "1st Place",
-          description: "Built a real-time environmental impact dashboard for enterprises — tracking, visualizing, and reporting carbon footprint and sustainability KPIs across business operations.",
+          description: "Built a dashboard for companies to monitor and cut their environmental impact — carbon footprint, emissions, and sustainability data across departments, updated in real time.",
           tags: ["Dashboard", "Sustainability", "Data Viz"],
         },
       ],
@@ -71,7 +71,7 @@ export const content = {
           title: "Computer Vision Member",
           company: "Sapienza Fast Charge",
           period: "Sep 2024 - Present",
-          description: "Developing image processing pipelines in ROS2 to detect and classify cones for autonomous vehicles. Fine-tuned YOLO-based models achieving 97.2% mAP@50 and curated a custom 30K+ image dataset.",
+          description: "Developing ROS2 pipelines to detect and classify cones for autonomous vehicles. Fine-tuned YOLO models to 97.2% mAP@50, built a 30K+ image dataset from scratch. In September 2025, took the stack to competition at Formula SAE Italy (FATA) in Varano de' Melegari.",
           tags: ["ROS2", "YOLO", "Computer Vision", "Python"],
           link: "https://sapienzafastcharge.it/"
         },
@@ -89,7 +89,7 @@ export const content = {
           title: "Open Source Flutter App",
           company: "LapisCalc",
           period: "2024",
-          description: "Open source repository for my published Flutter application, featuring clean state management, cross-platform responsiveness, and robust CI/CD practices.",
+          description: "My Flutter app on the Play Store, with source code on GitHub. Clean architecture, smooth cross-platform performance, version-controlled from day one.",
           tags: ["Flutter", "Open Source", "Dart"],
           link: "https://github.com/ilGalghi/LapisCalc"
         }
@@ -146,7 +146,7 @@ export const content = {
     },
     about: {
       title: "Chi Sono",
-      description: "Collego il mondo del software scalabile con i sistemi autonomi intelligenti. Attualmente studente Magistrale in AI & Robotica alla Sapienza, focalizzato su Computer Vision e Architetture Agentic. Come Co-Founder & CTO in Telcedo, guido lo sviluppo di piattaforme cloud per Digital Twin. Con un passato agonistico nel tennis, porto disciplina, resilienza e una mentalità orientata al problem-solving in ogni sfida ingegneristica. Vincitore per due anni consecutivi del Reply Student Tech Clash (2024 e 2025)."
+      description: "Sviluppo software per sistemi autonomi — pipeline di percezione, SLAM, e piattaforme cloud per il monitoraggio industriale. Studente Magistrale in AI & Robotica alla Sapienza. Co-Founder & CTO di Telcedo. Sei anni di tennis agonistico FIT: lavorare sotto pressione e portare a termine quello che si inizia è diventata un'abitudine. Vincitore per due anni di fila del Reply Student Tech Clash (2024 e 2025)."
     },
     experience: {
       title: "Esperienza Professionale",
@@ -156,7 +156,7 @@ export const content = {
           title: "Co-Founder & CTO",
           company: "Telcedo",
           period: "Mag 2025 - Presente",
-          description: "Guido la visione tecnica e l'infrastruttura cloud per soluzioni di Digital Twin industriali basate su AI. Ho progettato e sviluppato la piattaforma utilizzando Vue.js, Node.js e un'architettura scalabile.",
+          description: "Mi occupo di tutto il lato tecnico — ho progettato l'architettura, sviluppato la piattaforma da zero (Vue.js + Node.js) e gestisco il deployment cloud. Ho costruito anche il sito aziendale.",
           tags: ["Node.js", "Vue.js", "Cloud", "Architettura"],
           link: "https://telcedo.com"
         },
@@ -165,7 +165,7 @@ export const content = {
           title: "Sviluppatore App Freelance",
           company: "Freelance",
           period: "Feb 2024 - Presente",
-          description: "Sviluppo mobile Flutter/Dart cross-platform con focus su UI/UX e performance. Ho pubblicato un'app completa sul Play Store, gestendo le release tramite Google Play Console e pubblicando il codice su GitHub.",
+          description: "Sviluppo app Flutter/Dart focalizzate su performance e UX pulita. Un'app pubblicata sul Play Store, release gestite via Google Play Console, codice su GitHub.",
           tags: ["Flutter", "Dart", "Mobile", "UI/UX"],
           link: "https://play.google.com/store/apps/dev?id=4935235036652631052"
         }
@@ -181,8 +181,8 @@ export const content = {
           title: "Reply Student Tech Clash",
           company: "Reply",
           period: "2024",
-          subtitle: "1° su 33 team",
-          description: "Costruito un sistema multi-agente LLM per la sicurezza sul lavoro — automatizzando valutazione del rischio, monitoraggio della conformità e rilevamento dei pericoli in tempo reale.",
+          subtitle: "1° su 38+ team",
+          description: "Costruito una piattaforma RAG per la sicurezza sul lavoro — recupero di normative e procedure per segnalare rischi, guidare i controlli di conformità e dare le informazioni giuste al momento giusto.",
           tags: ["LLM", "Multi-Agent", "Safety AI", "Python"],
         },
         {
@@ -190,8 +190,8 @@ export const content = {
           title: "Reply Student Tech Clash",
           company: "Reply",
           period: "2025",
-          subtitle: "1° Posto",
-          description: "Costruito \"Gregorit\", una piattaforma agentic che trasforma consultazioni mediche in piani di cura strutturati tramite agenti coordinati, ragionamento automatizzato e workflow completi.",
+          subtitle: "1° su 33 team",
+          description: "Costruito \"Gregorit\", una piattaforma agentic che trasforma consultazioni mediche in piani di cura strutturati — agenti coordinati, ragionamento automatizzato, workflow end-to-end.",
           tags: ["Agentic AI", "Multi-Agent", "LLM"],
         },
         {
@@ -200,7 +200,7 @@ export const content = {
           company: "Codemotion",
           period: "2026",
           subtitle: "1° Posto",
-          description: "Costruito una dashboard real-time per l'impatto ambientale delle aziende — tracking, visualizzazione e reporting di KPI di sostenibilità e carbon footprint.",
+          description: "Costruito una dashboard per permettere alle aziende di monitorare e ridurre il proprio impatto ambientale — carbon footprint, emissioni e dati di sostenibilità per reparto, aggiornati in tempo reale.",
           tags: ["Dashboard", "Sostenibilità", "Data Viz"],
         },
       ],
@@ -210,7 +210,7 @@ export const content = {
           title: "Membro Computer Vision",
           company: "Sapienza Fast Charge",
           period: "Set 2024 - Presente",
-          description: "Sviluppo di pipeline in ROS2 per rilevare e classificare coni per veicoli autonomi. Modelli YOLO ottimizzati con 97.2% mAP@50 e gestione di un dataset personalizzato di oltre 30k immagini.",
+          description: "Sviluppo pipeline ROS2 per rilevare e classificare coni per veicoli autonomi. Modelli YOLO ottimizzati al 97.2% mAP@50, dataset da 30k+ immagini costruito da zero. A settembre 2025, portato lo stack in gara alla Formula SAE Italy (FATA) a Varano de' Melegari.",
           tags: ["ROS2", "YOLO", "Computer Vision", "Python"],
           link: "https://sapienzafastcharge.it/"
         },
@@ -228,7 +228,7 @@ export const content = {
           title: "App Flutter Open Source",
           company: "LapisCalc",
           period: "2024",
-          description: "Codice open source per la mia app Flutter pubblicata, che evidenzia un robusto state management, reattività cross-platform e practice di sviluppo pulito.",
+          description: "La mia app Flutter sul Play Store, con codice sorgente su GitHub. Architettura pulita, performance cross-platform, tutto version-controlled dall'inizio.",
           tags: ["Flutter", "Open Source", "Dart"],
           link: "https://github.com/ilGalghi/LapisCalc"
         }
