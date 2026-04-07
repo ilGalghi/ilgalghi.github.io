@@ -61,10 +61,56 @@ export const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-secondary animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-secondary/70"
       >
-        <ChevronDown className="w-6 h-6" />
+        <span className="text-sm font-medium tracking-wide">Scroll to explore</span>
+        <ChevronDown className="w-5 h-5 animate-bounce" />
       </motion.div>
+
+      {/* Infinite Logo Carousel */}
+      <div className="absolute bottom-40 w-full border-y border-white/5 bg-white/5 py-4 overflow-hidden backdrop-blur-md z-20">
+        <motion.div 
+          className="flex items-center justify-start gap-12 sm:gap-24 w-max pr-12 sm:pr-24"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ ease: "linear", duration: 120, repeat: Infinity }}
+        >
+          {/* We duplicate the same set of logos twice so that the scrolling is seamless. 
+              The layout runs from 0% to -50% and restarts cleanly without visual breaks. */}
+          {[1, 2].map((_, i) => (
+            <div key={i} className="flex shrink-0 items-center justify-start gap-12 sm:gap-24">
+              {[...Array(4)].map((_, j) => (
+                <div key={j} className="flex shrink-0 items-center justify-start gap-12 sm:gap-24">
+                  <img 
+                    src="/logos/logo-sapienza.webp" 
+                    alt="Sapienza" 
+                    className="h-8 sm:h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" 
+                  />
+                  <img 
+                    src="/logos/logo-reply.webp" 
+                    alt="Reply" 
+                    className="h-8 sm:h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" 
+                  />
+                  <img 
+                    src="/logos/logo-codemotion.webp" 
+                    alt="Codemotion" 
+                    className="h-8 sm:h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" 
+                  />
+                  <img 
+                    src="/logos/logo-fast-charge.webp" 
+                    alt="Sapienza Fast Charge" 
+                    className="h-8 sm:h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" 
+                  />
+                  <img 
+                    src="/logos/logo-eng.webp" 
+                    alt="Engineering" 
+                    className="h-8 sm:h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" 
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 };

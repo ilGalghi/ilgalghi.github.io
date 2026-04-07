@@ -109,9 +109,8 @@ export const content = {
     },
     navbar: {
       about: "About",
-      experience: "Experience",
+      resume: "Resume",
       projects: "Projects",
-      education: "Education",
       skills: "Skills",
       contact: "Contact"
     }
@@ -225,9 +224,8 @@ export const content = {
     },
     navbar: {
       about: "Chi Sono",
-      experience: "Esperienza",
+      resume: "Curriculum",
       projects: "Progetti",
-      education: "Formazione",
       skills: "Competenze",
       contact: "Contattami"
     }
