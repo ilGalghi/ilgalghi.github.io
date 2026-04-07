@@ -17,7 +17,7 @@ export const content = {
           title: "Co-Founder & CTO",
           company: "Telcedo",
           period: "May 2025 - Present",
-          description: "I handle the full technical side — designed the architecture, built the platform from scratch (Vue.js + Node.js), and own the cloud deployment. Also built the company website.",
+          description: "I handle the full technical side at Telcedo — architecture, development, and cloud deployment. Built the Digital Twin platform for industrial plants entirely from scratch.",
           tags: ["Node.js", "Vue.js", "Cloud", "Architecture"],
           link: "https://telcedo.com"
         },
@@ -156,7 +156,7 @@ export const content = {
           title: "Co-Founder & CTO",
           company: "Telcedo",
           period: "Mag 2025 - Presente",
-          description: "Mi occupo di tutto il lato tecnico — ho progettato l'architettura, sviluppato la piattaforma da zero (Vue.js + Node.js) e gestisco il deployment cloud. Ho costruito anche il sito aziendale.",
+          description: "Gestisco tutta la parte tecnica di Telcedo — dall'architettura al deployment cloud. Costruito interamente da zero la piattaforma Digital Twin per impianti industriali.",
           tags: ["Node.js", "Vue.js", "Cloud", "Architettura"],
           link: "https://telcedo.com"
         },
