@@ -89,8 +89,8 @@ export const content = {
           title: "Open Source Flutter App",
           company: "LapisCalc",
           period: "2024",
-          description: "My Flutter app on the Play Store, with source code on GitHub. Clean architecture, smooth cross-platform performance, version-controlled from day one.",
-          tags: ["Flutter", "Open Source", "Dart"],
+          description: "Ad-free Android calculator and unit converter — 12 conversion categories, date calculator, calculation history, and Material Design 3 UI. Available in 5 languages.",
+          tags: ["Flutter", "Android", "Open Source"],
           link: "https://github.com/ilGalghi/LapisCalc"
         }
       ]
@@ -228,8 +228,8 @@ export const content = {
           title: "App Flutter Open Source",
           company: "LapisCalc",
           period: "2024",
-          description: "La mia app Flutter sul Play Store, con codice sorgente su GitHub. Architettura pulita, performance cross-platform, tutto version-controlled dall'inizio.",
-          tags: ["Flutter", "Open Source", "Dart"],
+          description: "App Android calcolatrice e convertitore di unità, senza pubblicità — 12 categorie di conversione, calcolatrice di date, cronologia calcoli e Material Design 3. Disponibile in 5 lingue.",
+          tags: ["Flutter", "Android", "Open Source"],
           link: "https://github.com/ilGalghi/LapisCalc"
         }
       ]
