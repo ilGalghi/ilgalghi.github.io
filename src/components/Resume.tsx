@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../hooks/useLanguage';
 import { content } from '../data/content';
-import { GraduationCap, Briefcase, Calendar, Building2 } from 'lucide-react';
+import { GraduationCap, Briefcase, Calendar, Building2, ExternalLink } from 'lucide-react';
 
 const TimelineItem = ({ 
   item, 
@@ -22,14 +22,31 @@ const TimelineItem = ({
         transition={{ duration: 0.5 }}
         className="group relative p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300"
       >
-        <h3 className="font-bold text-white text-lg md:text-xl mb-2">
-          {type === 'education' ? item.degree || item.school : item.title}
-        </h3>
-        
+        {type === 'experience' && item.link ? (
+          <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group/link w-fit mb-2">
+            <h3 className="font-bold text-white text-lg md:text-xl group-hover/link:text-accent transition-colors">
+              {item.title}
+            </h3>
+            <span className="p-1.5 rounded-full bg-white/5 border border-white/10 group-hover/link:bg-accent/20 group-hover/link:border-accent/30 text-text-secondary group-hover/link:text-accent transition-all duration-300">
+              <ExternalLink className="w-3.5 h-3.5" />
+            </span>
+          </a>
+        ) : (
+          <h3 className="font-bold text-white text-lg md:text-xl mb-2">
+            {type === 'education' ? item.degree || item.school : item.title}
+          </h3>
+        )}
+
         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-text-secondary font-medium mb-4">
           <div className="flex items-center gap-2">
             {type === 'education' ? <GraduationCap className="w-4 h-4 text-text-secondary" /> : <Building2 className="w-4 h-4 text-text-secondary" />}
-            <span>{type === 'education' ? item.school : item.company}</span>
+            {type === 'experience' && item.link ? (
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                {item.company}
+              </a>
+            ) : (
+              <span>{type === 'education' ? item.school : item.company}</span>
+            )}
           </div>
           <div className="hidden sm:block w-1 h-1 rounded-full bg-white/20" />
           <div className="flex items-center gap-2 text-accent/90">
