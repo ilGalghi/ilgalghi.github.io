@@ -34,6 +34,37 @@ export const content = {
     },
     projects: {
       title: "Projects & Competitions",
+      competitionsLabel: "Competitions & Awards",
+      projectsLabel: "Projects",
+      competitions: [
+        {
+          id: 1,
+          title: "Reply Student Tech Clash",
+          company: "Reply",
+          period: "2024",
+          subtitle: "1st out of 33 teams",
+          description: "Built a multi-agent LLM system for workplace safety — automating risk assessment, compliance monitoring, and real-time hazard detection through coordinated AI agent pipelines.",
+          tags: ["LLM", "Multi-Agent", "Safety AI", "Python"],
+        },
+        {
+          id: 2,
+          title: "Reply Student Tech Clash",
+          company: "Reply",
+          period: "2025",
+          subtitle: "1st Place",
+          description: "Built \"Gregorit\", an agentic platform that transforms medical consultations into structured care plans through coordinated agents, automated reasoning, and end-to-end workflows.",
+          tags: ["Agentic AI", "Multi-Agent", "LLM"],
+        },
+        {
+          id: 3,
+          title: "Codemotion × ENG Hackathon",
+          company: "Codemotion",
+          period: "2026",
+          subtitle: "1st Place",
+          description: "Built a real-time environmental impact dashboard for enterprises — tracking, visualizing, and reporting carbon footprint and sustainability KPIs across business operations.",
+          tags: ["Dashboard", "Sustainability", "Data Viz"],
+        },
+      ],
       items: [
         {
           id: 1,
@@ -55,14 +86,6 @@ export const content = {
         },
         {
           id: 3,
-          title: "Reply Student Tech Clash Winner",
-          company: "Reply",
-          period: "2024 & 2025",
-          description: "1st place out of 33 teams! Built \"Gregorit\", an agentic platform that transforms medical consultations into structured care plans through coordinated agents, automated reasoning, and end-to-end workflows.",
-          tags: ["Hackathon", "Agentic AI", "Multi-Agent"]
-        },
-        {
-          id: 4,
           title: "Open Source Flutter App",
           company: "LapisCalc",
           period: "2024",
@@ -150,6 +173,37 @@ export const content = {
     },
     projects: {
       title: "Progetti & Competizioni",
+      competitionsLabel: "Competizioni & Premi",
+      projectsLabel: "Progetti",
+      competitions: [
+        {
+          id: 1,
+          title: "Reply Student Tech Clash",
+          company: "Reply",
+          period: "2024",
+          subtitle: "1° su 33 team",
+          description: "Costruito un sistema multi-agente LLM per la sicurezza sul lavoro — automatizzando valutazione del rischio, monitoraggio della conformità e rilevamento dei pericoli in tempo reale.",
+          tags: ["LLM", "Multi-Agent", "Safety AI", "Python"],
+        },
+        {
+          id: 2,
+          title: "Reply Student Tech Clash",
+          company: "Reply",
+          period: "2025",
+          subtitle: "1° Posto",
+          description: "Costruito \"Gregorit\", una piattaforma agentic che trasforma consultazioni mediche in piani di cura strutturati tramite agenti coordinati, ragionamento automatizzato e workflow completi.",
+          tags: ["Agentic AI", "Multi-Agent", "LLM"],
+        },
+        {
+          id: 3,
+          title: "Codemotion × ENG Hackathon",
+          company: "Codemotion",
+          period: "2026",
+          subtitle: "1° Posto",
+          description: "Costruito una dashboard real-time per l'impatto ambientale delle aziende — tracking, visualizzazione e reporting di KPI di sostenibilità e carbon footprint.",
+          tags: ["Dashboard", "Sostenibilità", "Data Viz"],
+        },
+      ],
       items: [
         {
           id: 1,
@@ -171,14 +225,6 @@ export const content = {
         },
         {
           id: 3,
-          title: "Vincitore Reply Student Tech Clash",
-          company: "Reply",
-          period: "2024 & 2025",
-          description: "1° posto su 33 team! Creazione di \"Gregorit\", una piattaforma agentic che trasforma consultazioni mediche in piani di cura strutturati tramite agenti coordinati, ragionamento automatizzato e workflow completi.",
-          tags: ["Hackathon", "Agentic AI", "Multi-Agent"]
-        },
-        {
-          id: 4,
           title: "App Flutter Open Source",
           company: "LapisCalc",
           period: "2024",
