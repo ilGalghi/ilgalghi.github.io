@@ -25,7 +25,10 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // We need to import Inter in index.css
+        sans: ['Inter', 'sans-serif'],
+        'instrument-serif': ['"Instrument Serif"', 'serif'],
+        'geist': ['Geist', 'system-ui', 'sans-serif'],
+        'geist-mono': ['"Geist Mono"', 'monospace'],
       }
     },
   },

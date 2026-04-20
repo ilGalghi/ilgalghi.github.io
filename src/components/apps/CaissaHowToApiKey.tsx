@@ -1,161 +1,311 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Key } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { AppNavbar } from './AppNavbar';
+import { AppFooter, PhoneFrame, MetaRow, APP_ACCENT, useBreakpoint } from './AppMocks';
+import type { CSSProperties } from 'react';
+
+const MONO = { fontFamily: 'Geist Mono, monospace' } as const;
+const SERIF = { fontFamily: '"Instrument Serif", serif' } as const;
 
 export const CaissaHowToApiKey = () => {
   const { language } = useLanguage();
+  const { isMobile } = useBreakpoint();
+  const lang = language === 'IT' ? 'it' : 'en';
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   const t = {
-    title: language === 'IT' ? 'Come creare una chiave API Google per CaissaChess' : 'How to create a Google API Key for CaissaChess',
-    desc: language === 'IT' 
-      ? 'Alcune funzionalità avanzate di intelligenza artificiale in CaissaChess richiedono una chiave API di Google Cloud. Segui questa guida per generarne una gratuitamente.'
-      : 'Some advanced computer vision and AI features in CaissaChess require a Google Cloud API Key. Follow this guide to generate one for free.',
-    s1Title: language === 'IT' ? 'Crea un Progetto su Google Cloud' : 'Create a Google Cloud Project',
-    s1Desc: language === 'IT' ? 'Vai alla Google Cloud Console. Dovrai accedere con il tuo account Google.' : 'Head over to the Google Cloud Console. You will need to sign in with your Google account.',
-    s1Link: language === 'IT' ? 'Apri Google Cloud Console' : 'Open Google Cloud Console',
-    s1i1: language === 'IT' ? 'Clicca sul menu a tendina dei progetti in alto a sinistra.' : 'Click on the project dropdown in the top left corner.',
-    s1i2: language === 'IT' ? 'Clicca su Nuovo Progetto (New Project).' : 'Click New Project.',
-    s1i3: language === 'IT' ? 'Dai un nome al progetto (es. "CaissaChess API") e clicca Crea.' : 'Give your project a name (e.g., "CaissaChess API") and click Create.',
-    s2Title: language === 'IT' ? 'Abilita le API Richieste' : 'Enable Required APIs',
-    s2Desc: language === 'IT' ? 'Una volta creato e selezionato il progetto, devi abilitare le API specifiche per CaissaChess.' : 'Once your project is created and selected, you need to enable the specific APIs required by CaissaChess.',
-    s2i1: language === 'IT' ? 'Vai al menu di navigazione > API e servizi > Libreria.' : 'Go to the navigation menu > APIs & Services > Library.',
-    s2i2: language === 'IT' ? 'Cerca "Cloud Vision API".' : 'Search for "Cloud Vision API".',
-    s2i3: language === 'IT' ? 'Cliccaci sopra e premi Abilita (Enable).' : 'Click on it and hit Enable.',
-    s3Title: language === 'IT' ? 'Genera la Chiave API' : 'Generate the API Key',
-    s3Desc: language === 'IT' ? 'Ora che le API sono abilitate, crea le tue credenziali.' : 'Now that the APIS are enabled, create your credentials.',
-    s3i1: language === 'IT' ? 'Vai su API e servizi > Credenziali.' : 'Go to APIs & Services > Credentials.',
-    s3i2: language === 'IT' ? 'Clicca su + CREA CREDENZIALI in alto.' : 'Click + CREATE CREDENTIALS at the top.',
-    s3i3: language === 'IT' ? 'Seleziona Chiave API (API key) dal menu a tendina.' : 'Select API key from the dropdown.',
-    s3i4: language === 'IT' ? 'Apparirà un popup con la tua nuova chiave. Copiala.' : 'A popup will appear with your new API key. Copy this key.',
-    s4Title: language === 'IT' ? 'Aggiungi la chiave su CaissaChess' : 'Add the Key to CaissaChess',
-    s4Desc: language === 'IT' ? 'Infine, apri l\'app CaissaChess sul tuo dispositivo Android.' : 'Finally, open the CaissaChess app on your Android device.',
-    s4i1: language === 'IT' ? 'Vai nelle Impostazioni (Settings) dell\'app.' : 'Go to the App Settings.',
-    s4i2: language === 'IT' ? 'Trova la sezione Funzionalità Cloud / API.' : 'Find the API Configuration or Cloud Features section.',
-    s4i3: language === 'IT' ? 'Incolla la tua nuova Chiave API e salva.' : 'Paste your newly generated API Key and tap Save.',
-    warn: language === 'IT' ? 'Importante:' : 'Important:',
-    warnText: language === 'IT' 
-      ? 'Mantieni la tua API key al sicuro. Google Cloud offre un tier gratuito abbondante, ma per alcuni servizi cloud Google richiede l\'inserimento di un metodo di fatturazione.'
-      : 'Keep your API key secure. Do not share it publicly. Google Cloud offers a free tier, but entering billing information is required for the cloud platform.'
+    back: lang === 'it' ? 'Torna a Caissa Node' : 'Back to Caissa Node',
+    kicker: lang === 'it' ? 'Configurazione · 5 minuti' : 'Setup · 5 minutes',
+    title: lang === 'it' ? 'Ottenere una chiave API Google Gemini' : 'Get a Google Gemini API key',
+    intro: lang === 'it'
+      ? 'Le funzioni di coaching e commento di Caissa Node usano Google Gemini. Crei gratis la tua chiave, la incolli nelle Impostazioni e resta sul tuo dispositivo — non la vediamo mai.'
+      : 'Caissa Node\'s coaching and commentary features are powered by Google Gemini. You create your own free key, paste it into Settings, and it stays on your device — we never see it or relay it.',
+    metaTime: lang === 'it' ? 'Tempo' : 'Time',
+    metaTimeV: '~5 min',
+    metaCost: lang === 'it' ? 'Costo' : 'Cost',
+    metaCostV: lang === 'it' ? 'Piano gratuito' : 'Free tier available',
+    metaReq: lang === 'it' ? 'Richiede' : 'Requires',
+    metaReqV: lang === 'it' ? 'Account Google' : 'Google account',
+    metaWhere: lang === 'it' ? 'Incolla in' : 'Paste into',
+    metaWhereV: lang === 'it' ? 'Impostazioni → AI → Chiave API' : 'Settings → AI → API key',
+    s1t: lang === 'it' ? 'Apri Google AI Studio' : 'Open Google AI Studio',
+    s1d: lang === 'it'
+      ? 'Vai su aistudio.google.com e accedi con un account Google. Basta un Gmail personale — niente Cloud Console, niente fatturazione per il piano gratuito.'
+      : 'Go to aistudio.google.com and sign in with any Google account. A personal Gmail account is enough — no Cloud Console, no billing setup required for the free tier.',
+    s1link: 'aistudio.google.com',
+    s2t: lang === 'it' ? 'Apri il pannello chiavi API' : 'Open the API keys panel',
+    s2d: lang === 'it'
+      ? 'Nella sidebar a sinistra, clicca Get API key. Se non vedi la sidebar, apri prima il menu in alto a sinistra.'
+      : 'In the left sidebar, click Get API key. If you don\'t see a sidebar, click the menu icon in the top-left first.',
+    s3t: lang === 'it' ? 'Crea una nuova chiave' : 'Create a new key',
+    s3d: lang === 'it'
+      ? 'Clicca Create API key. Google collegherà la chiave a un progetto esistente o ne creerà uno — va bene entrambe. Accetta i termini se richiesto.'
+      : 'Click Create API key. Google will either attach the key to an existing project or offer to create one for you — either is fine. Accept the terms if prompted.',
+    s4t: lang === 'it' ? 'Copia la chiave' : 'Copy the key',
+    s4d: lang === 'it'
+      ? 'La chiave è una stringa lunga che inizia con AIza. Copiala. Puoi tornare in questa pagina in qualsiasi momento, ma trattala come una password.'
+      : 'The key is a long string that starts with AIza. Copy it to your clipboard. You can come back to this page any time to view it again, but treat it like a password.',
+    s4example: lang === 'it' ? 'AIzaSy… (tienila segreta)' : 'AIzaSy… (keep this secret)',
+    s5t: lang === 'it' ? 'Incollala in Caissa Node' : 'Paste it into Caissa Node',
+    s5d: lang === 'it'
+      ? 'Apri Caissa Node, vai su Impostazioni → AI e incolla la chiave nel campo. Tocca Verifica. Un segno di spunta verde significa che sei pronto.'
+      : 'Open Caissa Node, go to Settings → AI, and paste the key into the API key field. Tap Verify. A green checkmark means you\'re ready — the coach, move explanations, and opening notes will light up.',
+    safetyTitle: lang === 'it' ? 'Alcune note sulla sicurezza' : 'A few notes on safety',
+    safety: [
+      lang === 'it'
+        ? 'La chiave è memorizzata nello storage sicuro del tuo dispositivo (Keychain / Keystore). Non lascia mai il dispositivo eccetto come parte di chiamate HTTPS dirette a Google.'
+        : 'The key is stored in your device\'s secure storage (Keychain / Keystore). It never leaves your device except as part of direct HTTPS calls to Google.',
+      lang === 'it'
+        ? 'Caissa Node non ha un server. Non c\'è account, niente telemetria, nessun proxy. Se elimini l\'app, la chiave sparisce.'
+        : 'Caissa Node doesn\'t have a server. There is no account, no telemetry, no proxy. If you delete the app, the key is gone.',
+      lang === 'it'
+        ? 'Se sospetti che la chiave sia stata compromessa, revocala da AI Studio → API keys e creane una nuova. Ci vuole meno di un minuto.'
+        : 'If you suspect the key was leaked, revoke it from AI Studio → API keys and create a new one. It takes under a minute.',
+    ],
+    limitsTitle: lang === 'it' ? 'Limiti del piano gratuito' : 'Free tier limits',
+    limitsBody: lang === 'it'
+      ? 'Il piano gratuito di Google è generoso — più che sufficiente per giocare e per la revisione post-partita. Se raggiungi un limite di frequenza, aspetta un minuto e riprova.'
+      : 'Google\'s free tier is generous — more than enough for casual play and post-game review. If you hit a rate limit, wait a minute and try again, or enable billing for higher quotas.',
+    troubleTitle: lang === 'it' ? 'Risoluzione dei problemi' : 'Troubleshooting',
+    trouble: [
+      {
+        t: lang === 'it' ? 'Verifica fallisce con 403' : 'Verify fails with 403',
+        d: lang === 'it'
+          ? 'La Generative Language API potrebbe non essere abilitata sul tuo progetto. Apri le impostazioni della chiave in AI Studio.'
+          : 'The Generative Language API may not be enabled on your project. Open the key\'s settings in AI Studio and make sure the API is allowed.',
+      },
+      {
+        t: lang === 'it' ? 'La chiave funziona in AI Studio ma non nell\'app' : 'Key works in AI Studio but not in the app',
+        d: lang === 'it'
+          ? 'Controlla eventuali spazi quando incolli. La chiave deve iniziare con AIza e avere circa 39 caratteri.'
+          : 'Check for stray spaces when pasting. The key should start with AIza and be about 39 characters long.',
+      },
+      {
+        t: lang === 'it' ? 'Voglio ruotare la chiave' : 'I want to rotate the key',
+        d: lang === 'it'
+          ? 'Crea prima una nuova chiave in AI Studio, incollala in Caissa Node, verifica, poi elimina la vecchia.'
+          : 'Create a new key in AI Studio first, paste it into Caissa Node, verify, then delete the old key from AI Studio.',
+      },
+    ],
+    ctaOpen: lang === 'it' ? 'Apri Google AI Studio' : 'Open Google AI Studio',
   };
 
   const steps = [
-    {
-      num: 1,
-      title: t.s1Title,
-      desc: t.s1Desc,
-      link: { text: t.s1Link, url: 'https://console.cloud.google.com/' },
-      items: [t.s1i1, t.s1i2, t.s1i3]
-    },
-    {
-      num: 2,
-      title: t.s2Title,
-      desc: t.s2Desc,
-      items: [t.s2i1, t.s2i2, t.s2i3]
-    },
-    {
-      num: 3,
-      title: t.s3Title,
-      desc: t.s3Desc,
-      items: [t.s3i1, t.s3i2, t.s3i3, t.s3i4]
-    },
-    {
-      num: 4,
-      title: t.s4Title,
-      desc: t.s4Desc,
-      items: [t.s4i1, t.s4i2, t.s4i3],
-      warning: true
-    }
+    { num: 1, t: t.s1t, d: t.s1d, extra: 'link' as const },
+    { num: 2, t: t.s2t, d: t.s2d },
+    { num: 3, t: t.s3t, d: t.s3d },
+    { num: 4, t: t.s4t, d: t.s4d, extra: 'key' as const },
+    { num: 5, t: t.s5t, d: t.s5d, extra: 'phone' as const },
   ];
 
   return (
-    <div className="bg-bg min-h-screen text-text-primary selection:bg-accent/30 selection:text-white">
+    <div style={{ background: '#0a0a0b', minHeight: '100vh', color: '#e8e8ea' }}>
       <AppNavbar />
-      <div className="pt-32 pb-12 px-6 md:px-12">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-4 mb-10 overflow-x-auto whitespace-nowrap pb-2 text-sm font-medium">
-            <Link to="/" className="inline-flex items-center text-text-secondary hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4 mr-1.5" />
-              Home
-            </Link>
-            <span className="text-text-tertiary">/</span>
-            <Link to="/app/caissachess" className="inline-flex items-center text-text-secondary hover:text-white transition-colors">
-              CaissaChess
-            </Link>
-            <span className="text-text-tertiary">/</span>
-            <span className="text-accent bg-accent/10 px-3 py-1 rounded-full">API Guide</span>
-          </div>
-          
-          <header className="mb-16 border-b border-white/5 pb-12">
-            <div className="bg-surface p-4 rounded-2xl border border-divider w-16 h-16 flex items-center justify-center mb-8 relative group overflow-hidden">
-              <div className="absolute inset-0 bg-accent/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-              <Key className="w-8 h-8 text-accent relative z-10" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-text-secondary">
-              {t.title}
-            </h1>
-            <p className="text-xl text-text-secondary max-w-2xl leading-relaxed">
-              {t.desc}
-            </p>
-          </header>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: isMobile ? '0 20px' : '0 40px' }}>
 
-          <section className="space-y-12">
-            {steps.map((step) => (
-              <div key={step.num} className="bg-surface border border-divider p-8 rounded-2xl hover:border-white/10 transition-colors group">
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent font-bold text-xl border border-accent/20 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300 flex-shrink-0">
-                    {step.num}
-                  </span>
-                  <h2 className="text-2xl font-bold">{step.title}</h2>
-                </div>
-                
-                <p className="text-text-secondary mb-6 leading-relaxed">
-                  {step.desc}
-                </p>
-                
-                {step.link && (
-                  <a 
-                    href={step.link.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-accent hover:text-white font-medium mb-6 group/link transition-colors bg-accent/5 px-4 py-2 border border-accent/10 rounded-lg"
-                  >
-                    {step.link.text} 
-                    <ExternalLink className="w-3.5 h-3.5 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
-                  </a>
-                )}
+        {/* Back */}
+        <div style={{ paddingTop: 32 }}>
+          <Link to="/app/caissachess" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, ...MONO, fontSize: 12, color: '#6b6b73', textDecoration: 'none', letterSpacing: 0.5, marginBottom: 40 }}>
+            ← {t.back}
+          </Link>
+        </div>
 
-                <ul className="space-y-3">
-                  {step.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-text-secondary">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
-                      <span className="leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+        {/* Hero */}
+        <div style={{ paddingBottom: 48, borderBottom: '1px solid #1a1a20', marginBottom: 0 }}>
+          <div style={{ ...MONO, fontSize: 11, color: APP_ACCENT, letterSpacing: 1.5, textTransform: 'uppercase' }}>{t.kicker}</div>
+          <h1 style={{ ...SERIF, fontWeight: 400, fontSize: isMobile ? 'clamp(36px, 10vw, 60px)' : 'clamp(48px, 7vw, 88px)', lineHeight: 0.98, letterSpacing: -1.5, margin: '12px 0 0', color: '#e8e8ea', maxWidth: 900 }}>
+            {t.title}
+          </h1>
+          <p style={{ fontSize: isMobile ? 15 : 18, color: '#9a9aa4', marginTop: 22, maxWidth: 640, lineHeight: 1.55 }}>{t.intro}</p>
+        </div>
 
-                {/* Spazio per futuri screenshot */}
-                <div className="mt-8 border-2 border-dashed border-white/10 rounded-xl p-8 flex items-center justify-center text-text-tertiary bg-bg/30">
-                  <em>[ User Screenshot / Immagine ]</em>
-                </div>
+        {/* Meta */}
+        <MetaRow items={[
+          { label: t.metaTime, value: t.metaTimeV },
+          { label: t.metaCost, value: t.metaCostV },
+          { label: t.metaReq, value: t.metaReqV },
+          { label: t.metaWhere, value: t.metaWhereV },
+        ]} />
 
-                {step.warning && (
-                  <div className="mt-8 bg-red-500/10 p-5 rounded-xl border border-red-500/20 text-red-200">
-                    <p className="text-sm leading-relaxed">
-                      <strong className="text-red-400">{t.warn}</strong> {t.warnText}
-                    </p>
-                  </div>
-                )}
+        {/* Steps */}
+        <section style={{ marginTop: 72 }}>
+          {steps.map(s => (
+            <ApiKeyStep key={s.num} num={s.num} total={steps.length} title={s.t} desc={s.d} extra={s.extra} s4example={t.s4example} s1link={t.s1link} isMobile={isMobile} />
+          ))}
+        </section>
+
+        {/* Safety */}
+        <section style={{ marginTop: isMobile ? 56 : 100, padding: '48px 0', borderTop: '1px solid #1a1a20' }}>
+          <h3 style={{ ...SERIF, fontWeight: 400, fontSize: 36, color: '#e8e8ea', margin: 0, letterSpacing: -0.5 }}>{t.safetyTitle}</h3>
+          <ul style={{ margin: '28px 0 0', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 14, maxWidth: 700 }}>
+            {t.safety.map((s, i) => (
+              <li key={i} style={{ display: 'grid', gridTemplateColumns: '24px 1fr', gap: 14, alignItems: 'start' }}>
+                <div style={{ ...MONO, fontSize: 11, color: APP_ACCENT, letterSpacing: 1, paddingTop: 4 }}>{String(i + 1).padStart(2, '0')}</div>
+                <div style={{ fontSize: 15, color: '#c0c0c8', lineHeight: 1.6 }}>{s}</div>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Free tier limits */}
+        <section style={{ marginTop: 64, padding: 32, border: '1px solid #1a1a20', borderRadius: 6, background: '#0a0a0b' }}>
+          <div style={{ ...MONO, fontSize: 11, color: '#6b6b73', letterSpacing: 1.5, textTransform: 'uppercase' }}>{t.limitsTitle}</div>
+          <p style={{ fontSize: 15, color: '#c0c0c8', marginTop: 12, lineHeight: 1.6, maxWidth: 700 }}>{t.limitsBody}</p>
+        </section>
+
+        {/* Troubleshooting */}
+        <section style={{ marginTop: isMobile ? 56 : 100 }}>
+          <h3 style={{ ...SERIF, fontWeight: 400, fontSize: 36, color: '#e8e8ea', margin: 0, letterSpacing: -0.5 }}>{t.troubleTitle}</h3>
+          <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+            {t.trouble.map((q, i) => (
+              <div key={i} style={{ padding: 24, border: '1px solid #1a1a20', borderRadius: 6, background: '#0a0a0b' }}>
+                <div style={{ ...MONO, fontSize: 11, color: APP_ACCENT, letterSpacing: 1 }}>Q/{String(i + 1).padStart(2, '0')}</div>
+                <div style={{ ...SERIF, fontSize: 22, color: '#e8e8ea', marginTop: 10, letterSpacing: -0.3, lineHeight: 1.2 }}>{q.t}</div>
+                <p style={{ fontSize: 14, color: '#9a9aa4', marginTop: 10, lineHeight: 1.55 }}>{q.d}</p>
               </div>
             ))}
-          </section>
-        </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section style={{ marginTop: isMobile ? 56 : 100, padding: '56px 0 40px', borderTop: '1px solid #1a1a20', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 20 }}>
+          <a
+            href="https://aistudio.google.com/apikey"
+            target="_blank"
+            rel="noreferrer"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 12, background: APP_ACCENT, color: '#0a0a0b', textDecoration: 'none', fontFamily: 'Geist, sans-serif', fontSize: 15, fontWeight: 500, padding: '16px 26px', borderRadius: 4 }}
+          >
+            {t.ctaOpen} ↗
+          </a>
+        </section>
+
+        <AppFooter lang={language} />
       </div>
     </div>
   );
 };
+
+// ─── Step component ────────────────────────────────────────────────────────────
+function ApiKeyStep({
+  num, total, title, desc, extra, s4example, s1link, isMobile,
+}: {
+  num: number; total: number; title: string; desc: string;
+  extra?: 'link' | 'key' | 'phone';
+  s4example: string; s1link: string; isMobile: boolean;
+}) {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '60px 1fr' : '80px 1fr 320px', gap: isMobile ? 20 : 40, padding: '40px 0', borderTop: '1px solid #1a1a20' }}>
+      {/* Number */}
+      <div>
+        <div style={{ fontFamily: '"Instrument Serif", serif', fontSize: 72, color: APP_ACCENT, lineHeight: 0.9, letterSpacing: -2 }}>
+          {String(num).padStart(2, '0')}
+        </div>
+        <div style={{ fontFamily: 'Geist Mono, monospace', fontSize: 10, color: '#6b6b73', letterSpacing: 1, marginTop: 8 }}>
+          / {String(total).padStart(2, '0')}
+        </div>
+      </div>
+
+      {/* Body */}
+      <div>
+        <h4 style={{ fontFamily: '"Instrument Serif", serif', fontWeight: 400, fontSize: 32, lineHeight: 1.1, letterSpacing: -0.5, margin: 0, color: '#e8e8ea' }}>
+          {title}
+        </h4>
+        <p style={{ fontSize: 16, color: '#c0c0c8', marginTop: 14, lineHeight: 1.6, maxWidth: 560 }}>{desc}</p>
+        {extra === 'link' && (
+          <a href="https://aistudio.google.com" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 18, padding: '10px 14px', borderRadius: 4, background: '#101015', border: '1px solid #1a1a20', color: '#e8e8ea', textDecoration: 'none', fontFamily: 'Geist Mono, monospace', fontSize: 13 }}>
+            <span style={{ color: APP_ACCENT }}>↗</span> {s1link}
+          </a>
+        )}
+        {extra === 'key' && (
+          <div style={{ marginTop: 18, padding: '14px 16px', borderRadius: 4, background: '#101015', border: '1px solid #1a1a20', fontFamily: 'Geist Mono, monospace', fontSize: 13, color: '#e8e8ea', display: 'inline-block', letterSpacing: 0.5 }}>
+            <span style={{ color: APP_ACCENT }}>●</span>{'  '}{s4example}
+          </div>
+        )}
+      </div>
+
+      {/* Illustration */}
+      {!isMobile && <StepIllustration step={num} />}
+    </div>
+  );
+}
+
+function StepIllustration({ step }: { step: number }) {
+  const frame: CSSProperties = { width: '100%', height: 200, borderRadius: 6, background: '#0a0a0b', border: '1px solid #1a1a20', padding: 16, position: 'relative', overflow: 'hidden', boxSizing: 'border-box' };
+  const tabStyle: CSSProperties = { fontFamily: 'Geist Mono, monospace', fontSize: 10, color: '#6b6b73', letterSpacing: 1 };
+
+  if (step === 1) return (
+    <div style={frame}>
+      <div style={{ display: 'flex', gap: 6, marginBottom: 12 }}>
+        {[0,1,2].map(i => <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: '#2a2a32' }} />)}
+      </div>
+      <div style={{ ...tabStyle, marginBottom: 10 }}>aistudio.google.com</div>
+      <div style={{ fontFamily: '"Instrument Serif", serif', fontSize: 26, color: '#e8e8ea', lineHeight: 1.1 }}>Google AI<br />Studio</div>
+      <div style={{ marginTop: 14, padding: '8px 12px', display: 'inline-block', background: APP_ACCENT, color: '#0a0a0b', borderRadius: 3, fontFamily: 'Geist, sans-serif', fontSize: 11, fontWeight: 500 }}>Sign in with Google</div>
+    </div>
+  );
+
+  if (step === 2) return (
+    <div style={frame}>
+      <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', gap: 12, height: '100%' }}>
+        <div style={{ borderRight: '1px solid #1a1a20', paddingRight: 8, display: 'flex', flexDirection: 'column', gap: 6 }}>
+          {['Prompts','Chat','Tune','Get API key','Docs'].map(l => (
+            <div key={l} style={{ fontFamily: 'Geist Mono, monospace', fontSize: 10, padding: '5px 6px', borderRadius: 3, background: l === 'Get API key' ? `${APP_ACCENT}22` : 'transparent', color: l === 'Get API key' ? APP_ACCENT : '#6b6b73', border: l === 'Get API key' ? `1px solid ${APP_ACCENT}55` : '1px solid transparent' }}>{l}</div>
+          ))}
+        </div>
+        <div style={{ padding: 8 }}>
+          <div style={tabStyle}>API keys</div>
+          <div style={{ marginTop: 10, height: 24, background: '#101015', borderRadius: 3, border: '1px dashed #2a2a32' }} />
+          <div style={{ marginTop: 8, height: 24, background: '#101015', borderRadius: 3, border: '1px dashed #2a2a32' }} />
+        </div>
+      </div>
+    </div>
+  );
+
+  if (step === 3) return (
+    <div style={frame}>
+      <div style={tabStyle}>Create API key</div>
+      <div style={{ marginTop: 14, padding: 12, background: '#101015', border: '1px solid #1a1a20', borderRadius: 4 }}>
+        <div style={{ ...tabStyle }}>PROJECT</div>
+        <div style={{ fontFamily: 'Geist, sans-serif', fontSize: 13, color: '#e8e8ea', marginTop: 4 }}>My Project • caissa</div>
+      </div>
+      <div style={{ marginTop: 14, display: 'flex', gap: 8 }}>
+        <div style={{ padding: '8px 14px', background: '#101015', border: '1px solid #1a1a20', borderRadius: 3, color: '#9a9aa4', fontFamily: 'Geist, sans-serif', fontSize: 11 }}>Cancel</div>
+        <div style={{ padding: '8px 14px', background: APP_ACCENT, color: '#0a0a0b', borderRadius: 3, fontFamily: 'Geist, sans-serif', fontSize: 11, fontWeight: 500 }}>Create API key</div>
+      </div>
+    </div>
+  );
+
+  if (step === 4) return (
+    <div style={frame}>
+      <div style={tabStyle}>Your API key</div>
+      <div style={{ marginTop: 14, padding: 14, background: '#101015', border: `1px solid ${APP_ACCENT}55`, borderRadius: 4, fontFamily: 'Geist Mono, monospace', fontSize: 13, color: '#e8e8ea', letterSpacing: 0.5, position: 'relative' }}>
+        AIzaSy••••••••••••••••
+        <div style={{ position: 'absolute', top: 8, right: 8, fontSize: 10, color: APP_ACCENT, fontFamily: 'Geist Mono, monospace' }}>⎘ COPY</div>
+      </div>
+      <div style={{ marginTop: 12, fontFamily: 'Geist Mono, monospace', fontSize: 10, color: '#6b6b73' }}>Treat this like a password.</div>
+    </div>
+  );
+
+  if (step === 5) return (
+    <div style={{ ...frame, padding: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ transform: 'scale(0.52)', transformOrigin: 'center' }}>
+        <PhoneFrame scale={1} accent={APP_ACCENT}>
+          <div style={{ padding: 24, fontFamily: 'Geist, sans-serif' }}>
+            <div style={{ fontSize: 10, color: '#6b6b73', letterSpacing: 1, fontFamily: 'Geist Mono, monospace' }}>SETTINGS • AI</div>
+            <div style={{ fontSize: 18, color: '#e8e8ea', marginTop: 10, fontWeight: 500 }}>API key</div>
+            <div style={{ marginTop: 14, padding: 12, background: '#101015', border: `1px solid ${APP_ACCENT}`, borderRadius: 4, fontFamily: 'Geist Mono, monospace', fontSize: 12, color: '#e8e8ea' }}>
+              AIzaSy••••••••
+            </div>
+            <div style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 8, color: '#4ade80', fontSize: 13 }}>
+              <span>✓</span> Verified
+            </div>
+          </div>
+        </PhoneFrame>
+      </div>
+    </div>
+  );
+
+  return null;
+}
